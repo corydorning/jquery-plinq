@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>jQuery plinQ plug-in</title>
+  <style type="text/css">
+		a:after {content: attr(href).replace('http://','');}
+  </style>
+</head>
+
+<body>
+<ul>
+  <li><a href="http://www.corydorning.com/">Just a link</a></li>
+  <li><a href="http://www.corydorning.com/about">Just a link</a>, text after link</li>
+  <li>Text before link, <a href="http://www.corydorning.com/blog">just a link</a></li>
+  <li>Text before link, <a href="http://www.corydorning.com/projects">just a link</a>, text after link</li>
+  <li><a name="#anchor">Named anchor</a></li>
+  <li>No link</li>
+</ul>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+<script src="jquery.plinq.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+	$('a').plinq();
+});
+
+function plinqCSS() {
+		return 'attr(href)';
+};
+</script>
+</body>
+</html>
